@@ -7,6 +7,7 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
 - Se familiariser avec la structure de données vector
 - Utiliser les tests unitaires afin de faciliter le développement
 - Se familiariser avec le concept de pile
+- Se familiariser avec l'utilisation des classes paramétrées (class templates) afin de rendre la programmation générique 
 
 ## Étapes à suivre
 

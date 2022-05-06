@@ -12,7 +12,13 @@
 #include <stdexcept>
 
 /**
- * @class Classe implantant une pile générique.
+ * @class Classe implantant une pile générique.  Attention: il ne s'agit pas ici simplement d'une classe mais d'un patron
+ * de classe.  La classe Pile contient un paramètre de type: c'est ce qui est indiqué avec l'énoncé template<typename T>.
+ * Si on veut créer une Pile d'entiers on utilisera l'énoncé Pile<int> maPile.
+ * Si on veut créer une Pile de réels, on utilisera l'énoncé Pile<double> maPile.
+ * Si on a créé une classe appelée Tugabudoire, et qu'on veut créer une Pile de Tugabudoires on utilisera l'énoncé Pile<Tugabudoire> maPile.
+ * Comparez avec la classe vector...
+ *
  * @tparam T Type d'éléments de la pile.  Tous les éléments sur la pile doivent avoir ce type.
  */
 template <typename T>
