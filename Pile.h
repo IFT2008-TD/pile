@@ -19,11 +19,11 @@ template <typename T>
 class Pile {
 public:
 
-         Pile   (std::size_t = 10) ; // Construction
-    void push   (const T&) ;         // Ajouter un élément
-    T    pop    () ;                 // Retirer un élément
-    bool vide   () const ;           // Vérifier si la pile contient des éléments
-    bool pleine () const ;           // Vérifier si la pile est saturée
+    explicit Pile   (std::size_t = 10) ; // Construction
+    void     push   (const T&) ;         // Ajouter un élément
+    T        pop    () ;                 // Retirer un élément
+    bool     vide   () const ;           // Vérifier si la pile contient des éléments
+    bool     pleine () const ;           // Vérifier si la pile est saturée
 
 private:
 
