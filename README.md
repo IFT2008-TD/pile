@@ -1,4 +1,4 @@
-# pile_squelette_projet
+# Pile
 Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dans le premier TD du cours IFT-2008.  Le but du projet est d'implanter une pile rudimentaire.
 
 ## Objectifs de l'activité
@@ -13,7 +13,7 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
 
 - Bien lire le README
 - Cloner le projet dans la VM avec l'instruction 
-  ```git clone https://github.com/pascalcharp/pile_squelette_projet```
+  ```git clone https://github.com/IFT2008-TD/Pile.git```
 - Étape 1: Réfléchir...
   - Comprendre le mécanisme de la pile
   - Comprendre les comportements attendus de chaque méthode
