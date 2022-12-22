@@ -95,6 +95,11 @@ void Pile<T>::vider() {
 
 }
 
+/**
+ * @brief Retourne true si l'objet Pile est valide.  Voir README pour une explication de l'invariant.
+ * @tparam T Type des éléments contenus dans la pile.
+ * @return true si la pile est valide.
+ */
 template<typename T>
 bool Pile<T>::invariant() const {
     return false;
