@@ -95,5 +95,10 @@ void Pile<T>::vider() {
 
 }
 
+template<typename T>
+bool Pile<T>::invariant() const {
+    return false;
+}
+
 
 #endif //PILE_INTRO_PILEIMPLEMENTATION_H
