@@ -25,11 +25,22 @@ template <typename T>
 class Pile {
 public:
 
-    explicit Pile   (std::size_t = 10) ; // Construction
+    explicit Pile   (std::size_t = 10) ; // Construction d'une pile de capacité donnée
+
     void     push   (const T&) ;         // Ajouter un élément
-    T        pop    () ;                 // Retirer un élément
+    void     pop    () ;                 // Retirer le prochain élément
+    T        top    () const ;           // Lire le prochain élément
+
     bool     vide   () const ;           // Vérifier si la pile contient des éléments
     bool     pleine () const ;           // Vérifier si la pile est saturée
+    size_t   disponible () const ;       // Compter le nombre de places restantes
+
+    void     redimensionner (size_t) ;   // Changer la capacité totale
+    void     vider () ;                  // Effacer tous les éléments
+
+private:
+
+    bool invariant () const ;
 
 private:
 
