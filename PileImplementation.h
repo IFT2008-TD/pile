@@ -13,7 +13,9 @@
  * @param capacite_maximale Nombre maximal d'éléments dans la pile à tout moment.
  */
 template<typename T>
-Pile<T>::Pile(std::size_t capacite_maximale){}
+Pile<T>::Pile(std::size_t capacite_maximale) : pile(capacite_maximale), cardinal (0) {
+    if (capacite_maximale == 0) throw std::invalid_argument("Pile::Pile capacité nulle.") ;
+}
 
 /**
  * @brief Ajoute un élément sur la pile.
@@ -22,7 +24,11 @@ Pile<T>::Pile(std::size_t capacite_maximale){}
  * @except runtime_error si la pile est déjà remplie à capacité.
  */
 template<typename T>
-void Pile<T>::push(const T &valeur) {}
+void Pile<T>::push(const T &valeur) {
+    if (pleine()) throw std::runtime_error("Pile::push sur pile saturée") ;
+    pile.at(cardinal) = valeur ;
+    cardinal ++ ;
+}
 
 /**
  * @brief Retire un élément de la pile.
@@ -31,7 +37,8 @@ void Pile<T>::push(const T &valeur) {}
  */
 template<typename T>
 void Pile<T>::pop() {
-
+    if (vide()) throw std::runtime_error("Pile::pop sur pile vide") ;
+    cardinal -- ;
 }
 
 /**
@@ -42,8 +49,8 @@ void Pile<T>::pop() {
  */
 template <typename T>
 T Pile<T>::top() const {
-    T bidon ;
-    return bidon ;
+    if (vide()) throw std::runtime_error("Pile::top sur pile vide") ;
+    return pile.at(cardinal - 1) ;
 }
 
 /**
@@ -53,7 +60,7 @@ T Pile<T>::top() const {
  */
 template<typename T>
 bool Pile<T>::vide() const {
-    return false ;
+    return (cardinal == 0) ;
 }
 
 /**
@@ -63,7 +70,7 @@ bool Pile<T>::vide() const {
  */
 template<typename T>
 bool Pile<T>::pleine() const {
-    return true ;
+    return (disponible() == 0) ;
 }
 
 /**
@@ -73,7 +80,7 @@ bool Pile<T>::pleine() const {
  */
 template <typename T>
 size_t Pile<T>::disponible() const {
-    return 0 ;
+    return pile.size() - cardinal ;
 }
 
 /**
@@ -83,7 +90,7 @@ size_t Pile<T>::disponible() const {
  */
 template <typename T>
 void Pile<T>::redimensionner(size_t n) {
-
+    pile.resize(n) ;
 }
 
 /**
@@ -92,7 +99,7 @@ void Pile<T>::redimensionner(size_t n) {
  */
 template<typename T>
 void Pile<T>::vider() {
-
+    cardinal = 0 ;
 }
 
 /**
@@ -102,7 +109,8 @@ void Pile<T>::vider() {
  */
 template<typename T>
 bool Pile<T>::invariant() const {
-    return false;
+
+    return true ;
 }
 
 

@@ -13,7 +13,7 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
 
 - Bien lire le README
 - Cloner le projet dans la VM avec l'instruction 
-  ```git clone https://github.com/pascalcharp/pile_squelette_projet```
+  ```git clone https://github.com/IFT2008-TD/Pile.git```
 - Étape 1: Réfléchir...
   - Comprendre le mécanisme de la pile
   - Comprendre les comportements attendus de chaque méthode
@@ -56,13 +56,32 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
   - Après push(valeur), l'élément sur le dessus de la pile est valeur.
   - Lance une exception si la pile est pleine
 - pop
-  - Retourne la valeur de l'élément sur le dessus de la pile
   - Après pop sur le dernier élément, la pile est de nouveau vide
   - Lance une exception si la pile est vide
   - Si des éléments sont insérés dans l'ordre sur la pile, ils sont retirés dans l'ordre inverse, en LIFO
+- top
+  - Retourne la valeur du dernier élément inséré sur la pile.
+  - Lance une exception si la pile est vide
 - vide
   - Retourne true sur une pile vide
-  - Retourne false sur une pile non-vide
+  - Retourne false sur une pile non vide
 - pleine
-  - Retourne true sur une pile pleine: une tentative de push résultera en une exception
-  - Retourne false sur une pile non-pleine
+  - Retourne true sur une pile pleine : une tentative de push résultera en une exception
+  - Retourne false sur une pile non pleine
+- disponible
+  - Retourne le nombre d'insertions possibles avant de saturer la pile.  Par-exemple: si on a une pile
+dont la capacité totale est 10, et qu'on a déjà fait 4 insertions, cette méthode devrait retourner 6
+- redimensionner
+  - Permet de changer la capacité totale de la pile.  Par-exemple, si on a créé une pile de capacité 10,
+un appel à redimensionner(15) résultera en une pile de capacité 15.
+    - Si la nouvelle capacité est plus grande que l'ancienne, l'intégrité des données déjà présentes doit
+être garantie.
+    - Si la nouvelle capacité est plus petite que l'ancienne le comportement est non défini.
+    - Si la nouvelle capacité est nulle, une exception runtime_error sera lancée.
+
+## Conditions de validité de la pile
+
+Lorsqu'on fait une opération Push, que se passe-t-il?  D'abord le cardinal de la pile est augmenté de 1 
+unité.  Ensuite, le sommet de la pile doit aussi être augmenté de 1 unité.  Et finalement, les relations 
+suivantes devraient toujours être respectées: 
+``` capacité - cardinal >= 0```
