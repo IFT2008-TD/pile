@@ -95,3 +95,17 @@ TEST(Pile, sequence_push_pop_disponibilite) {
 
 }
 
+TEST(Pile, sequence_push_pop_resize) {
+    Pile<int> p(5) ;
+
+    for (auto i = 0; i < 5; ++i) p.push(1) ;
+    EXPECT_TRUE(p.pleine()) ;
+    p.redimensionner(8) ;
+    EXPECT_FALSE(p.pleine()) ;
+    EXPECT_EQ(3, p.disponible()) ;
+    for (auto i = 0; i < 5; ++i) {
+        EXPECT_EQ(1, p.top()) ;
+        p.pop() ;
+    }
+    EXPECT_TRUE(p.vide()) ;
+}
