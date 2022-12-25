@@ -1,6 +1,9 @@
-//
-// Created by etudiant on 22-05-03.
-//
+/**
+ * @file tests_pile.cpp
+ * @brief tests unitaires pour la classe Pile
+ * @author Pascal Charpentier
+ *
+ */
 #include "Pile.h"
 #include "gtest/gtest.h"
 

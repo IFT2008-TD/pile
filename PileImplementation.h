@@ -1,6 +1,8 @@
-//
-// Created by etudiant on 22-05-03.
-//
+/**
+ * @file PileImplementation.h
+ * @brief Header pour la classe Pile
+ * @author Pascal Charpentier
+ */
 
 #ifndef PILE_INTRO_PILEIMPLEMENTATION_H
 #define PILE_INTRO_PILEIMPLEMENTATION_H

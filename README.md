@@ -1,4 +1,4 @@
-# pile_squelette_projet
+# IFT-2008 TD: la pile
 Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dans le premier TD du cours IFT-2008.  Le but du projet est d'implanter une pile rudimentaire.
 
 ## Objectifs de l'activité
