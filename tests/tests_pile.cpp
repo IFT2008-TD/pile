@@ -5,37 +5,36 @@
 #include "gtest/gtest.h"
 
 TEST(Pile, constructeur_noexcept) {
-    EXPECT_EQ(0, 1) ;
+    EXPECT_NO_THROW(Pile<int> p) ;
 }
 
-TEST(Pile, constructeur_capacite_non_valide_throw) {
-    EXPECT_EQ(0, 1) ;
+class PileTest : public ::testing::Test {
+protected:
+
+    PileTest() : pile10(10), pile1(1) {}
+
+    Pile<int> pile10 ;
+    Pile<int> pile1 ;
+
+};
+
+TEST_F(PileTest, constructeur_pile_vide) {
+
 }
 
-TEST(Pile, pop_pile_vide_throw) {
-    EXPECT_EQ(0, 1) ;
+TEST_F(PileTest, constructeur_pile_non_pleine) {
+
 }
 
-TEST(Pile, push_pile_pleine_throw) {
-    EXPECT_EQ(0, 1) ;
+TEST_F(PileTest, push_pile_pleine_throw) {
+
 }
 
-TEST(Pile, pile_initiale_vide) {
-    EXPECT_EQ(0, 1) ;
+TEST_F(PileTest, pop_pile_vide_throw) {
+
 }
 
-TEST(Pile, push_non_vide) {
-    EXPECT_EQ(0, 1) ;
+TEST_F(PileTest, push_pop_recupere_le_dernier) {
+
 }
 
-TEST(Pile, push_pop_recupere_valeur) {
-    EXPECT_EQ(0, 1) ;
-}
-
-TEST(Pile, push_pop_redevient_vide) {
-    EXPECT_EQ(0, 1) ;
-}
-
-TEST(Pile, push_pop_sequence) {
-   EXPECT_EQ(0, 1) ;
-}

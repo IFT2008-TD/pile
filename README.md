@@ -12,8 +12,8 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
 ## Étapes à suivre
 
 - Bien lire le README
-- Cloner le projet dans la VM avec l'instruction 
-  ```git clone https://github.com/IFT2008-TD/Pile.git```
+- Cloner le projet dans la CLion en utilisant 
+  ```get from VCS``` et en saisissant l'adresse du dépôt: ```https://github.com/IFT2008-TD/pile```
 - Étape 1: Réfléchir...
   - Comprendre le mécanisme de la pile
   - Comprendre les comportements attendus de chaque méthode

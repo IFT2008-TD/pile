@@ -49,6 +49,8 @@ private:
 
     /** @var Nombre d'éléments sur la pile.  Ne peut être négatif */
     std::size_t cardinal ;
+    std::size_t capacite ;
+
 };
 
 
