@@ -29,16 +29,21 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
 ## Liste des méthodes
 
 - Constructeur
-  - Construit une pile initialement vide ayant une capacité maximale donnée
-  
+  - Construit une pile initialement vide ayant une capacité maximale donnée 
 - push  
-    - Ajoute un élément sur le dessus de la pile
+  - Ajoute un élément sur le dessus de la pile
+- top
+  - Lit l'élément sur le dessus de la pile, mais ne le retire pas
 - pop
-  - Retire l'élément sur le dessus de la pile
+  - Retire l'élément sur le dessus de la pile, mais ne le lit pas
 - vide
   - Indique que la pile est vide
 - pleine
   - Indique que la pile est complement remplie
+- disponible
+  - Compte le nombre d'insertions encore possible avant saturation
+- redimensionner
+  - Augmente ou diminue la capacité de la pile
 
 ## Comportements attendus
 
@@ -59,5 +64,5 @@ Comme son nom l'indique, ce dépôt contient un squelette de projet utilisé dan
   - Retourne true sur une pile vide
   - Retourne false sur une pile non-vide
 - pleine
-  - Retourne true sur une pile pleine
+  - Retourne true sur une pile pleine: une tentative de push résultera en une exception
   - Retourne false sur une pile non-pleine
